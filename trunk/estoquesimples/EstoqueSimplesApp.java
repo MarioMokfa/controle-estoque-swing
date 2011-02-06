@@ -16,7 +16,8 @@ public class EstoqueSimplesApp extends SingleFrameApplication {
      * At startup create and show the main frame of the application.
      */
     @Override protected void startup() {
-        show(new EstoqueSimplesView(this));
+        //show(new EstoqueSimplesView(this));
+        show(new GerenciaEstoqueView());
     }
 
     /**
