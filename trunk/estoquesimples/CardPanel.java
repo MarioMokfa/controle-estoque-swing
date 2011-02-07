@@ -45,6 +45,12 @@ public class CardPanel extends javax.swing.JPanel {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        telaInsereEstoque = new javax.swing.JPanel();
+        label2 = new java.awt.Label();
+        novoCodigo = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jButton10 = new javax.swing.JButton();
 
         setLayout(new java.awt.CardLayout());
 
@@ -59,7 +65,7 @@ public class CardPanel extends javax.swing.JPanel {
         });
 
         label1.setAlignment(java.awt.Label.CENTER);
-        label1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        label1.setFont(new java.awt.Font("Dialog", 1, 14));
         label1.setName("labelNomePrograma"); // NOI18N
         label1.setText("Estoque Simples");
 
@@ -77,34 +83,32 @@ public class CardPanel extends javax.swing.JPanel {
         telaInicialLayout.setHorizontalGroup(
             telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(telaInicialLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
-                .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addGap(84, 84, 84)
+                .addComponent(jButton1)
+                .addGap(81, 81, 81)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(116, 116, 116)
+                .addComponent(jButton3)
+                .addGap(58, 58, 58))
             .addGroup(telaInicialLayout.createSequentialGroup()
-                .addGap(114, 114, 114)
+                .addGap(326, 326, 326)
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(333, Short.MAX_VALUE))
         );
         telaInicialLayout.setVerticalGroup(
             telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(telaInicialLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addContainerGap()
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(41, 41, 41)
                 .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton3))
-                .addGap(67, 67, 67)
-                .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
                     .addComponent(jButton2)
                     .addComponent(jButton4))
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(393, Short.MAX_VALUE))
         );
 
         add(telaInicial, "cardInicial");
@@ -113,6 +117,11 @@ public class CardPanel extends javax.swing.JPanel {
 
         jButton5.setText("Novo Item");
         jButton5.setName("jButton5"); // NOI18N
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("Editar Item");
         jButton6.setName("jButton6"); // NOI18N
@@ -131,42 +140,104 @@ public class CardPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14));
+        jLabel2.setText("Gerencia Estoque");
+        jLabel2.setName("jLabel2"); // NOI18N
+
         javax.swing.GroupLayout telaEstoqueLayout = new javax.swing.GroupLayout(telaEstoque);
         telaEstoque.setLayout(telaEstoqueLayout);
         telaEstoqueLayout.setHorizontalGroup(
             telaEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(telaEstoqueLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
                 .addGroup(telaEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5)
-                    .addComponent(jButton7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
-                .addGroup(telaEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton8)
-                    .addComponent(jButton6))
-                .addGap(79, 79, 79))
-            .addGroup(telaEstoqueLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(jButton9)
-                .addContainerGap(199, Short.MAX_VALUE))
+                    .addGroup(telaEstoqueLayout.createSequentialGroup()
+                        .addGap(341, 341, 341)
+                        .addComponent(jLabel2))
+                    .addGroup(telaEstoqueLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(telaEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton9)
+                            .addGroup(telaEstoqueLayout.createSequentialGroup()
+                                .addComponent(jButton5)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton6)
+                                .addGap(31, 31, 31)
+                                .addComponent(jButton7)
+                                .addGap(35, 35, 35)
+                                .addComponent(jButton8)))))
+                .addContainerGap(274, Short.MAX_VALUE))
         );
         telaEstoqueLayout.setVerticalGroup(
             telaEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(telaEstoqueLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addGap(27, 27, 27)
                 .addGroup(telaEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton5)
-                    .addComponent(jButton6))
-                .addGap(94, 94, 94)
-                .addGroup(telaEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton6)
                     .addComponent(jButton7)
                     .addComponent(jButton8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGap(76, 76, 76)
                 .addComponent(jButton9)
-                .addGap(35, 35, 35))
+                .addContainerGap(313, Short.MAX_VALUE))
         );
 
         add(telaEstoque, "cardEstoque");
+
+        telaInsereEstoque.setName("telaInsereEstoque"); // NOI18N
+
+        label2.setFont(new java.awt.Font("Dialog", 1, 14));
+        label2.setName("tituloInsereEstoque"); // NOI18N
+        label2.setText("Incluir Novo Produto");
+
+        novoCodigo.setName("novoCodigo"); // NOI18N
+
+        jLabel1.setText("Código:");
+        jLabel1.setName("jLabel1"); // NOI18N
+
+        jButton10.setText("Voltar");
+        jButton10.setName("jButton10"); // NOI18N
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout telaInsereEstoqueLayout = new javax.swing.GroupLayout(telaInsereEstoque);
+        telaInsereEstoque.setLayout(telaInsereEstoqueLayout);
+        telaInsereEstoqueLayout.setHorizontalGroup(
+            telaInsereEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(telaInsereEstoqueLayout.createSequentialGroup()
+                .addGroup(telaInsereEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(telaInsereEstoqueLayout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(telaInsereEstoqueLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(novoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(telaInsereEstoqueLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton10)))
+                .addContainerGap(511, Short.MAX_VALUE))
+        );
+        telaInsereEstoqueLayout.setVerticalGroup(
+            telaInsereEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(telaInsereEstoqueLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
+                .addGroup(telaInsereEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(novoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(106, 106, 106)
+                .addComponent(jButton10)
+                .addContainerGap(286, Short.MAX_VALUE))
+        );
+
+        add(telaInsereEstoque, "cardInsereEstoque");
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -179,9 +250,20 @@ public class CardPanel extends javax.swing.JPanel {
         cl.show(this, "cardInicial");
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        CardLayout cl = (CardLayout) (this.getLayout());
+        cl.show(this, "cardInsereEstoque");
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        CardLayout cl = (CardLayout) (this.getLayout());
+        cl.show(this, "cardEstoque");
+    }//GEN-LAST:event_jButton10ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -190,9 +272,14 @@ public class CardPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private java.awt.Label label1;
+    private java.awt.Label label2;
+    private javax.swing.JTextField novoCodigo;
     private javax.swing.JPanel telaEstoque;
     private javax.swing.JPanel telaInicial;
+    private javax.swing.JPanel telaInsereEstoque;
     // End of variables declaration//GEN-END:variables
 
 }
