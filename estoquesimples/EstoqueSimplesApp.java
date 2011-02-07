@@ -17,7 +17,8 @@ public class EstoqueSimplesApp extends SingleFrameApplication {
      */
     @Override protected void startup() {
         //show(new EstoqueSimplesView(this));
-        show(new GerenciaEstoqueView());
+        //show(new GerenciaEstoqueView());
+        show(new CardPanel());
     }
 
     /**
