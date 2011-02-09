@@ -34,11 +34,12 @@ public class CardPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         telaInicial = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        Estoque = new javax.swing.JButton();
         label1 = new java.awt.Label();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Cliente = new javax.swing.JButton();
+        Fornecedor = new javax.swing.JButton();
+        Financeiro = new javax.swing.JButton();
+        Sair = new javax.swing.JButton();
         telaEstoque = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -54,61 +55,82 @@ public class CardPanel extends javax.swing.JPanel {
 
         setLayout(new java.awt.CardLayout());
 
+        telaInicial.setBackground(new java.awt.Color(51, 153, 255));
+        telaInicial.setForeground(new java.awt.Color(153, 0, 204));
         telaInicial.setName("telaInicial"); // NOI18N
+        telaInicial.setPreferredSize(new java.awt.Dimension(800, 600));
 
-        jButton1.setText("Estoque");
-        jButton1.setName("jButton1"); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Estoque.setText("Estoque");
+        Estoque.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Estoque.setName("Estoque"); // NOI18N
+        Estoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                EstoqueActionPerformed(evt);
             }
         });
 
         label1.setAlignment(java.awt.Label.CENTER);
-        label1.setFont(new java.awt.Font("Dialog", 1, 14));
+        label1.setFont(new java.awt.Font("Serif", 1, 36)); // NOI18N
+        label1.setForeground(new java.awt.Color(0, 0, 51));
         label1.setName("labelNomePrograma"); // NOI18N
         label1.setText("Estoque Simples");
 
-        jButton2.setText("Cliente");
-        jButton2.setName("jButton2"); // NOI18N
+        Cliente.setText("Cliente");
+        Cliente.setName("Cliente"); // NOI18N
 
-        jButton3.setText("Fornecedor");
-        jButton3.setName("jButton3"); // NOI18N
+        Fornecedor.setText("Fornecedor");
+        Fornecedor.setName("Fornecedor"); // NOI18N
 
-        jButton4.setText("Fianceiro");
-        jButton4.setName("jButton4"); // NOI18N
+        Financeiro.setText("Fianceiro");
+        Financeiro.setName("Financeiro"); // NOI18N
+
+        Sair.setText("Sair");
+        Sair.setName("Sair"); // NOI18N
+        Sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SairActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout telaInicialLayout = new javax.swing.GroupLayout(telaInicial);
         telaInicial.setLayout(telaInicialLayout);
         telaInicialLayout.setHorizontalGroup(
             telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(telaInicialLayout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(jButton1)
-                .addGap(81, 81, 81)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addGap(116, 116, 116)
-                .addComponent(jButton3)
-                .addGap(58, 58, 58))
+                .addGap(129, 129, 129)
+                .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Financeiro, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Estoque, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 287, Short.MAX_VALUE)
+                .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Fornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(137, Short.MAX_VALUE))
             .addGroup(telaInicialLayout.createSequentialGroup()
-                .addGap(326, 326, 326)
+                .addGap(284, 284, 284)
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(333, Short.MAX_VALUE))
+                .addContainerGap(354, Short.MAX_VALUE))
+            .addGroup(telaInicialLayout.createSequentialGroup()
+                .addGap(344, 344, 344)
+                .addComponent(Sair, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(397, Short.MAX_VALUE))
         );
         telaInicialLayout.setVerticalGroup(
             telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(telaInicialLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(25, 25, 25)
                 .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4))
-                .addContainerGap(393, Short.MAX_VALUE))
+                    .addComponent(Estoque, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Financeiro, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                    .addComponent(Fornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Sair, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104))
         );
 
         add(telaInicial, "cardInicial");
@@ -165,7 +187,7 @@ public class CardPanel extends javax.swing.JPanel {
                                 .addComponent(jButton7)
                                 .addGap(35, 35, 35)
                                 .addComponent(jButton8)))))
-                .addContainerGap(274, Short.MAX_VALUE))
+                .addContainerGap(385, Short.MAX_VALUE))
         );
         telaEstoqueLayout.setVerticalGroup(
             telaEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,7 +243,7 @@ public class CardPanel extends javax.swing.JPanel {
                     .addGroup(telaInsereEstoqueLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton10)))
-                .addContainerGap(511, Short.MAX_VALUE))
+                .addContainerGap(622, Short.MAX_VALUE))
         );
         telaInsereEstoqueLayout.setVerticalGroup(
             telaInsereEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -240,10 +262,10 @@ public class CardPanel extends javax.swing.JPanel {
         add(telaInsereEstoque, "cardInsereEstoque");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void EstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstoqueActionPerformed
         CardLayout cl = (CardLayout) (this.getLayout());
         cl.show(this, "cardEstoque");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_EstoqueActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         CardLayout cl = (CardLayout) (this.getLayout());
@@ -260,13 +282,18 @@ public class CardPanel extends javax.swing.JPanel {
         cl.show(this, "cardEstoque");
     }//GEN-LAST:event_jButton10ActionPerformed
 
+    private void SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_SairActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Cliente;
+    private javax.swing.JButton Estoque;
+    private javax.swing.JButton Financeiro;
+    private javax.swing.JButton Fornecedor;
+    private javax.swing.JButton Sair;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
