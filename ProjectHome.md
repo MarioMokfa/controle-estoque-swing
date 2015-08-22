@@ -1,0 +1,1 @@
+Um projeto de controle de estoque utilizando swing.
